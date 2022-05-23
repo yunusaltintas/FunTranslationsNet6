@@ -1,0 +1,15 @@
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\bin\Debug\net6.0\FunTranslation.Application.deps.json
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\bin\Debug\net6.0\FunTranslation.Application.dll
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\bin\Debug\net6.0\FunTranslation.Application.pdb
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\bin\Debug\net6.0\FunTranslation.Domain.dll
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\bin\Debug\net6.0\FunTranslation.Domain.pdb
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.csproj.AssemblyReference.cache
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.AssemblyInfoInputs.cache
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.AssemblyInfo.cs
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.csproj.CoreCompileInputs.cache
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.csproj.CopyComplete
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.dll
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\refint\FunTranslation.Application.dll
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\FunTranslation.Application.pdb
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Application\obj\Debug\net6.0\ref\FunTranslation.Application.dll

@@ -1,0 +1,12 @@
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\bin\Debug\net6.0\FunTranslation.Domain.deps.json
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\bin\Debug\net6.0\FunTranslation.Domain.dll
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\bin\Debug\net6.0\FunTranslation.Domain.pdb
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\FunTranslation.Domain.csproj.AssemblyReference.cache
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\FunTranslation.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\FunTranslation.Domain.AssemblyInfoInputs.cache
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\FunTranslation.Domain.AssemblyInfo.cs
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\FunTranslation.Domain.csproj.CoreCompileInputs.cache
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\FunTranslation.Domain.dll
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\refint\FunTranslation.Domain.dll
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\FunTranslation.Domain.pdb
+C:\Users\yunus\source\repos\FunTranslation\src\Core\FunTranslation.Domain\obj\Debug\net6.0\ref\FunTranslation.Domain.dll

@@ -1,0 +1,63 @@
+version: '3.4'
+services:
+  companyrelation:
+    container_name: funtranslation
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ynsdc/funtranslation
+    environment:
+      PORT: 80
+      GRAYLOG__HOST: localhost
+      GRAYLOG__PORT: 9000
+      GRAYLOG__PROTOCOL: UDP
+    ports:
+      - "80:80"
+  web:
+    build: .
+    ports:
+       - "8000:80"
+    depends_on:
+       - dev-sqldata
+  dev-sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "sekizkarakteR11."
+      MSSQL_PID: Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-server-linux-data:/var/opt/mssql/data
+  dev-redis:
+    image: redis
+    restart: on-failure
+    ports:
+      - "6379:6379"
+  dev-mongo:
+    image: "mongo:3"
+    volumes:
+      - /graylog/data/mongo:/data/db
+  dev-elasticsearch:
+    image: "elasticsearch:2"
+    command: "elasticsearch -Des.cluster.name='graylog'"
+    volumes:
+      - /graylog/data/elasticsearch:/usr/share/elasticsearch/data
+  dev-graylog:
+    image: graylog2/server:2.1.1-1
+    environment:
+      GRAYLOG_PASSWORD_SECRET: somepasswordpepper
+      GRAYLOG_ROOT_PASSWORD_SHA2: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+      GRAYLOG_WEB_ENDPOINT_URI: http://127.0.0.1:9000/api
+    links:
+      - dev-mongo:mongo
+      - dev-elasticsearch:elasticsearch
+    ports:
+      - "9000:9000"
+      - "12201:12201"
+      - "1514:1514"
+      - 12201:12201/udp
+        
+        
+volumes:
+  mssql-server-linux-data:

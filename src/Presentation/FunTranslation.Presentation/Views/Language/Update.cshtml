@@ -1,0 +1,20 @@
+﻿@model LanguageUpdateViewModel
+
+<h3>Language Update</h3>
+
+<form asp-action="update" asp-controller="language" method="post">
+
+    @Html.HiddenFor(i=>i.Id)
+    @Html.HiddenFor(i=>i.CreateDate)
+    @Html.HiddenFor(i=>i.CreateUserId)
+    @Html.HiddenFor(i=>i.UpdateDate)
+    @Html.HiddenFor(i=>i.UpdateUserId)
+
+    <div class="form-group">
+        <label for="InputlanguageName">Language Name</label>
+        <input type="text" asp-for="@Model.LanguageName" class="form-control" id="languageName" aria-describedby="languageName" placeholder="Language Name">
+        <small id="languageName" class="form-text text-muted"></small>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

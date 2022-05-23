@@ -1,0 +1,105 @@
+﻿@model TranslateViewModel
+
+<h3>Translation</h3>
+<div id="myform">
+    <form>
+        <div class="form-group row">
+            <div class="col-2">
+                <label for="InputOriginal">Original Text: </label>
+            </div>
+            <div class="col-10">
+                <input type="text" asp-for="@Model.OriginalText" class="form-control" id="OriginalText" aria-describedby="OriginalText" placeholder="Original Text">
+                <small id="OriginalText" class="form-text text-muted"></small>
+                <span asp-validation-for="OriginalText" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row mt-2">
+            <div class="col-2">
+                <label for="InputLanguageId">Language Name:</label>
+            </div>
+            <div class="col-10">
+                @Html.DropDownListFor(i=>i.LanguageId, ViewBag.Languages as List<SelectListItem>, "Select Language", new { @class ="form-control"})
+                <span asp-validation-for="LanguageId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row mt-2">
+            <div class="col-2">
+                <label for="InputTranslated">Translated Text</label>
+            </div>
+            <div class="col-10">
+                <input type="text" asp-for="@Model.TranslatedText" class="form-control" id="TranslatedText" aria-describedby="TranslatedText" placeholder="Translated Text">
+                <small id="TranslatedText" class="form-text text-muted"></small>
+            </div>
+        </div>
+
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+        </div>
+
+        <div class="row col-2 mt-2">
+            <button type="button" id="btnSave" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts    {
+
+    <script>
+        $("#btnSave").click(function() {
+            $.ajax(
+                {
+                    type: "post",
+                    url: "/Translation/Index",
+                    data: {
+                        LanguageId: $("#LanguageId").val(),
+                        OriginalText: $("#OriginalText").val()
+                    },
+                    success: function(data) {
+                        if (data != null) {
+                            let response = jQuery.parseJSON(data);
+                            $("#TranslatedText").val(response.TranslatedText)
+                        } else {
+                            alert("Something went wrong");
+                        }
+                    },
+                    failure: function(data) {
+                        alert(data.responseText);
+                    },
+                    error: function(data) {
+                        $('#myform').html(data.responseText);
+                    }
+                }
+            );
+        });
+
+                                                        //$("#btnSave").click(function() {
+                                                        //    $.ajax(
+                                                        //        {
+                                                        //            type: "post",
+                                                        //            url: "/Translation/Index",
+                                                        //            data: {
+                                                        //                LanguageId: $("#LanguageId").val(),
+                                                        //                OriginalText: $("#OriginalText").val()
+                                                        //            },
+                                                        //            contentType: "application/json ; charset=utf-8",
+                                                        //            success: function(data) {
+                                                        //                if (data != null) {
+                                                        //                    let response = jQuery.parseJSON(data);
+                                                        //                    $("#TranslatedText").val(response.TranslatedText)
+                                                        //                } else {
+                                                        //                    alert("Something went wrong");
+                                                        //                }
+                                                        //            },
+                                                        //            failure: function(data) {
+                                                        //                alert(data.responseText);
+                                                        //            },
+                                                        //            error: function(data) {
+                                                        //                $('#myform').html(data.responseText);
+                                                        //            }
+                                                        //        }
+                                                        //    );
+                                                        //});
+
+    </script>
+}
